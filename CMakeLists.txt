@@ -32,10 +32,10 @@ message(STATUS "cxxopts version ${VERSION}")
 
 project(cxxopts VERSION "${VERSION}" LANGUAGES CXX)
 
-enable_testing()
+# enable_testing()
 
-option(CXXOPTS_BUILD_EXAMPLES "Set to ON to build examples" ON)
-option(CXXOPTS_BUILD_TESTS "Set to ON to build tests" ON)
+option(CXXOPTS_BUILD_EXAMPLES "Set to ON to build examples" OFF)
+option(CXXOPTS_BUILD_TESTS "Set to ON to build tests" OFF)
 option(CXXOPTS_ENABLE_INSTALL "Generate the install target" ON)
 
 # request c++11 without gnu extension for the whole project and enable more warnings
@@ -104,5 +104,5 @@ if(CXXOPTS_ENABLE_INSTALL)
     install(FILES ${PROJECT_SOURCE_DIR}/include/cxxopts.hpp DESTINATION include)
 endif()
 
-add_subdirectory(src)
-add_subdirectory(test)
+#add_subdirectory(src)
+#add_subdirectory(test)
